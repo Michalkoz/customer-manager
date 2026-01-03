@@ -6,7 +6,7 @@ import { RouterOutlet } from '@angular/router';
   imports: [RouterOutlet],
   template: `
     <h1>Welcome to {{title.toUpperCase()}}!</h1>
-    {{3+1}}
+    <img src="assets/images/customer2.jpg" alt="CustomerImage"/>
     <router-outlet />
   `,
   styles: [],
@@ -14,12 +14,5 @@ import { RouterOutlet } from '@angular/router';
 export class AppComponent {
   title: string = 'customer-manager';
 
-  constructor() {
-    setTimeout(
-      () => {
-        this.title = 'customer-manager-updated after timeout';
-            }, 
-            3000);
-  }
-
+  constructor() {}
 }
