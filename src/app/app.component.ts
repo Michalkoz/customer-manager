@@ -9,6 +9,7 @@ import { RouterOutlet } from '@angular/router';
     <h1 [style.color]="nameColor" [class.isActive]="isActive">Welcome to "{{title.toUpperCase()}}"!</h1>
 
     <img [src]="photoUrl" alt="CustomerImage"/>
+    <button (click)="changeIsActive()" type="button">Przełącz podkreslenie</button>
     <router-outlet />
   `,
   styles: [
@@ -20,6 +21,8 @@ export class AppComponent {
   nameColor: string = "blue";
   photoUrl: string = "assets/images/customer2.jpg";
   isActive: boolean = true;
-
+  changeIsActive() {
+    this.isActive=!this.isActive;
+  };
   constructor() {}
 }
