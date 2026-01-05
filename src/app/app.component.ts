@@ -5,15 +5,21 @@ import { RouterOutlet } from '@angular/router';
   selector: 'app-root',
   imports: [RouterOutlet],
   template: `
-    <h1>Welcome to "{{title.toUpperCase()}}"!</h1>
+    
+    <h1 [style.color]="nameColor" [class.isActive]="isActive">Welcome to "{{title.toUpperCase()}}"!</h1>
+
     <img [src]="photoUrl" alt="CustomerImage"/>
     <router-outlet />
   `,
-  styles: [],
+  styles: [
+    '.isActive { text-decoration: underline; }'
+  ],
 })
 export class AppComponent {
   title: string = 'customer-manager';
+  nameColor: string = "blue";
   photoUrl: string = "assets/images/customer2.jpg";
+  isActive: boolean = true;
 
   constructor() {}
 }
