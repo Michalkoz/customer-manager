@@ -6,7 +6,7 @@ import { RouterOutlet } from '@angular/router';
   imports: [RouterOutlet],
   template: `
     <h1>Welcome to "{{title.toUpperCase()}}"!</h1>
-    <img src="{{photoUrl}}" alt="CustomerImage"/>
+    <img [src]="photoUrl" alt="CustomerImage"/>
     <router-outlet />
   `,
   styles: [],
